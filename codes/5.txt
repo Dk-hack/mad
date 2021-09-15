@@ -1,0 +1,22 @@
+import java.io.*;
+public class Main
+{
+	public static void main(String[] args)throws IOException 
+	{
+		BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("enter the string");
+		String s=in.readLine();
+		char ch;
+		int l=s.length();
+		String output="";
+		for(int i=0;i<l;i++)
+		{
+		    ch=s.charAt(i);
+		    if(ch==' ')
+		    output=output+s.charAt(i+1);
+		}
+		String f=s.charAt(0)+output;
+		System.out.print("short form of String is = ");
+		System.out.print(f.toUpperCase());
+	}
+}

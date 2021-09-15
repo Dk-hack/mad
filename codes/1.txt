@@ -1,0 +1,54 @@
+import java.io.*;
+public class Main
+{
+	public static void main(String[] args)throws IOException
+	{
+	    BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+	    System.out.println("enter number of days: ");
+	    int N=Integer.parseInt(in.readLine());
+	    if(N<=30)
+	    {
+	        if(N==30)
+	        System.out.println("1 month");
+	        else{
+	            System.out.println("days" +N);
+	        }
+	    }
+	    else if((N>30)&&(N<365))
+	    {
+	        int a=N/30;
+	        int b=N-(a*30);
+	        if(b==0)
+	        {
+	            System.out.println("month" +a);
+	        }
+	        else{
+	            System.out.println("months" +a);
+	            System.out.println("days" +b);
+	        }
+	    }
+	    else
+	    {
+	        int x=N/365;
+	        int y=N-(x*365);
+	        if(y==0)
+	        {
+	            System.out.println("year" +x);
+	        }
+	        else{
+	            int z=y/30;
+	            int p=y-(z*30);
+	            if(p==0)
+	            {System.out.println("years" +x);
+	            System.out.println("months" +z);
+	            }
+	            else{
+	                System.out.println("years" +x);
+	                System.out.println("months" +z);
+	                System.out.println("days" +p);
+	            }
+	        }
+	        
+	    }
+	}
+}

@@ -1,0 +1,31 @@
+
+import java.io.*;
+public class Main
+{
+	public static void main(String[] args)throws IOException
+	{
+	    BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+	    System.out.println("enter total marks : ");
+	    int N=Integer.parseInt(in.readLine());
+	    if(N>=80)
+	    {
+	        System.out.println("Bravo Distinction");
+	    }
+	    else if((N>=60)&&(N<80))
+	    {
+	        System.out.println("THEEK HAI First Division");
+	    }
+	    else if((N>=45)&&(N<60))
+	    {
+	        System.out.println("ok Second divison");
+	    }
+	    else if((N>=40)&&(N<45))
+	    {
+	        System.out.println("bach gae pass");
+	    }
+	    else{
+	        System.out.println("lagg gae");
+	    }
+	}
+
+}
