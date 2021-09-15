@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner ip=new Scanner(System.in);
+		System.out.println("Entre string ");
+		String s=ip.nextLine();
+		s=s.toUpperCase();
+		char ch;
+		int l=s.length();
+		for(int i=65;i<=90;i++)
+		{
+		    for(int j=0;j<l;j++)
+		    {
+		        ch=s.charAt(j);
+		        if(ch==(char)i)
+		        System.out.print(ch);
+		    }
+		}
+	}
+}
