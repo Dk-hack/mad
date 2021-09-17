@@ -1,0 +1,76 @@
+import java.util.Scanner;
+public class Main
+
+{
+    String[] arr1={"","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+	String[] arr2={"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
+	String[] arr3={"","","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninety"};
+	public static void main(String[] args)
+	
+	{
+	    Scanner ip=new Scanner(System.in);
+	    System.out.println("Enter number in integer number & if want exit press 0:");
+	    int N=ip.nextInt();
+	    Main obj=new Main();
+	    obj.display(N);
+	}
+	void display(int x)
+	{
+	    if((x>=1)&&(x<=9))
+	    {
+	        System.out.print(arr1[x]);
+	    }
+	    else if((x>=10)&&(x<=19))
+	    {
+	        x=x%10;
+	        System.out.print(arr2[x]);
+	    }
+	    else if((x>=20)&&(x<=99))
+	    {
+	       System.out.print(arr3[x/10]);
+	       System.out.print(" "+arr1[x%10]);
+	    }
+	    else if((x>=100)&&(x<=999))
+	    {
+	        display(x/100);
+	        System.out.print(" Hundread ");
+	        display(x%100);
+	    }
+	    else if((x>=1000)&&(x<=9999))
+	    {
+	        display(x/1000);
+	        System.out.print(" Thousand ");
+	        display(x%1000);
+	    }
+	    else if((x>=10000)&&(x<=99999))
+	    {
+	        display(x/1000);
+	        System.out.print(" Thousand ");
+	        display(x%1000);
+	    }
+	    else if((x>=100000)&&(x<=999999))
+	    {
+	        display(x/100000);
+	        System.out.print(" Lakh ");
+	        display(x%100000);
+	    }
+	    else if((x>=1000000)&&(x<=9999999))
+	    {
+	        display(x/100000);
+	        System.out.print(" Lakh ");
+	        display(x%100000);
+	    }
+	    else if((x>=10000000)&&(x<=99999999))
+	    {
+	        display(x/10000000);
+	        System.out.print(" Crore ");
+	        display(x%10000000);
+	    }
+	    else if((x>=100000000)&&(x<=999999999))
+	    {
+	        display(x/10000000);
+	        System.out.print(" Crore ");
+	        display(x%10000000);
+	    }
+	}
+}
